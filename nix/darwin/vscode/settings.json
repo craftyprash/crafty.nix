@@ -1,0 +1,42 @@
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.fontFamily": "CaskaydiaMono Nerd Font",
+  "editor.fontFamily": "CaskaydiaMono Nerd Font",
+  "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.minimap.enabled": false,
+  "editor.suggestOnTriggerCharacters": false,
+  "extensions.ignoreRecommendations": true,
+  "redhat.telemetry.enabled": false,
+  "git.autofetch": true,
+  "git.openRepositoryInParentFolders": "always",
+  "git.confirmSync": false,
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "[java]": {
+    "editor.defaultFormatter": "josevseb.google-java-format-for-vs-code",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[zig]": {
+    "editor.defaultFormatter": "ziglang.vscode-zig"
+  },
+  "terminal.integrated.profiles.osx": {
+    "fish": {
+      "path": "/run/current-system/sw/bin/fish",
+      "args": []
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "editor.stickyScroll.enabled": true,
+  "zig.path": "zig",
+  "zig.zls.enabled": true,
+  "zig.zls.path": "zls",
+  "workbench.colorTheme": "Gruvbox Dark Hard"
+}
