@@ -2,12 +2,12 @@
 
 ## Setup
 
-1. Copy the secrets template:
+1. Copy the secrets template nix/secrets.nix.example to nix/secrets.nix:
 ```bash
 cp secrets.nix.example secrets.nix
 ```
 
-2. Edit `secrets.nix` with your actual secrets:
+2. Edit `secrets.nix` with your actual secret which is a GitHub token used to clone your dotfiles repository:
 ```nix
 {
   github_token = "ghp_your_actual_token_here";
@@ -17,6 +17,7 @@ cp secrets.nix.example secrets.nix
 
 3. Run the setup:
 ```bash
+chmod +x setup.sh
 ./setup.sh
 ```
 
@@ -24,7 +25,7 @@ cp secrets.nix.example secrets.nix
 
 5. Run nix commands:
 ```bash
-cd ~/craftynix/nix
+cd ~/crafty.nix/nix
 nix run nix-darwin -- switch --flake .#craftymac
 ```
 

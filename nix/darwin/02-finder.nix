@@ -25,18 +25,8 @@
     # Show all files
     AppleShowAllFiles = true;
 
-    # Hide recent tags
-    ShowRecentTags = false;
-
-    # Don't show tags
-    TagsOnSidebar = false;
-
-    # Empty trash securely
-    # EmptyTrashSecurely = true;
-
     # Use list view by default
     FXPreferredViewStyle = "Nlsv";
-
   };
 
   # Activation script for Finder-specific items
