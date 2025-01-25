@@ -32,8 +32,11 @@
       # Development tools
       "watchman"
       "libpq"
+      "mysql-client"
       "awscli"
       "terraform"
+      "podman"
+      "podman-compose"
     ];
 
     # macOS-specific GUI apps installed via Homebrew Cask
@@ -41,15 +44,20 @@
       # Development tools
       "dbeaver-community"
       "tableplus"
-      "docker" # System integration needed
+      # "docker"
+      "podman-desktop"
       "bruno"
       "wezterm"
       "ghostty"
       "session-manager-plugin"
 
+      # AI/ML tools
+      "ollama"
+
       # Editors
       "visual-studio-code"
       "zed"
+      "figma"
 
       # System utilities
       "karabiner-elements"
@@ -79,5 +87,15 @@
     masApps = {};
 
   };
+
+  system.activationScripts.postUserActivation.text = lib.mkAfter ''
+    # Initialize Podman machine if it doesn't exist
+    echo "Setting up Podman..." >&2
+    if ! /opt/homebrew/bin/podman machine list | grep -q "podman-machine-default"; then
+        echo "Initializing Podman machine..." >&2
+        /opt/homebrew/bin/podman machine init
+        /opt/homebrew/bin/podman machine start
+    fi
+  '';
 
 }

@@ -67,15 +67,10 @@
     mise
     jq
     lazydocker
-    mysql-client
-    #libpq is installed via homebrew
 
-    # Programming languages
-    zig    # Zig compiler and toolchain
-    zls    # Zig Language Server
-    go
-    rustup
-    python3
+    # Programming Zig and Zls here, rest is managed via mise
+    zig     # Zig compiler and toolchain
+    zls     # Zig Language Server
 
     # Misc
     stow

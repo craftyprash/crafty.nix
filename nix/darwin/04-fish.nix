@@ -64,23 +64,16 @@ in
       if command -v mise > /dev/null
         mise activate fish | source
       end
+
+      # Add Homebrew to PATH
+      if test -d /opt/homebrew/bin
+        fish_add_path /opt/homebrew/bin
+      end
     '';
   };
 
   # Add Fish to shells and set as default
   environment.shells = [ pkgs.fish ];
-
-  # Fish shell configuration
-  environment.variables = {
-    # Add Homebrew and libpq paths for Fish
-    fish_user_paths = lib.concatStringsSep " " [
-      "$fish_user_paths"
-      "/opt/homebrew/bin"
-      "/opt/homebrew/opt/libpq/bin"
-      "/opt/homebrew/opt/mysql-client/bin"
-      "~/.local/bin"
-    ];
-  };
 
   # Run fish plugin installation during system activation
   system.activationScripts.postUserActivation.text = ''
